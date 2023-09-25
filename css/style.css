@@ -41,12 +41,99 @@ a {
   font-style: normal;
 }
 
-h1 {
+.container {
+  min-width: 768px;
+  background: #F8F8F8;
+  padding-bottom: 50px;
+}
+
+
+
+.header {
+  padding: 16px 0px 16px 24px;
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+}
+
+.header__title {
+  color: #7E7E82;
+  font-family: TT Lakes Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 24px 24px 24px 24px;
+  gap: 16px;
+}
+
+.nav-menu__item {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;  
+  width: 224px;
+  height: 72px;
+  padding: 0px 16px 0px 16px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+
+}
+
+.nav-menu__item--hidden {
+  display: none;
+}
+
+.button {
+  margin-left: 32px;
   color: #1B1C21;
   font-family: TT Lakes Medium;
-  font-size: 26px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: -0.2px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+
 }
+
+.button::before {
+  content: "";
+  background: url("../img/expand.svg");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.button.button-active::before {
+  transform: rotate(180deg);
+  transition-duration: 1s;
+}
+
+.button-active.button span:first-child {
+  display: none;
+}
+
+.button-active.button span:last-child {
+  display:inline-block;
+}
+
+.button span:first-child {
+  display: inline-block;
+}
+
+.button span:last-child {
+  display: none;
+}
+
