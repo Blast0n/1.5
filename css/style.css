@@ -76,7 +76,8 @@ a {
   display: flex;  
   justify-content: space-between;
   align-items: center;  
-  width: 224px;
+  min-width: 224px;
+  max-width: 240px;
   height: 72px;
   padding: 0px 16px 0px 16px;
   border-radius: 6px;
@@ -116,11 +117,6 @@ a {
   top: 6px;
 }
 
-.button.button-active::before {
-  transform: rotate(180deg);
-  transition-duration: 1s;
-}
-
 .button-active.button span:first-child {
   display: none;
 }
@@ -137,3 +133,23 @@ a {
   display: none;
 }
 
+
+@media (min-width:1120px){
+  .header {
+    padding-left: 32px;
+  }
+
+  .nav-menu {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 32px;
+  }
+
+  .nav-menu__item:nth-child(7){
+    display: flex;
+  }
+
+  .nav-menu__item:nth-child(8){
+    display: flex;
+  }
+
+}
