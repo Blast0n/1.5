@@ -177,6 +177,8 @@ a {
     display: flex;
   }
 
+  
+
 }
 
 
@@ -188,6 +190,10 @@ a {
 
   .content {
     display: block;
+  }
+
+  .nav-menu__item {
+    min-width: 224px;
   }
 }
 
